@@ -1,6 +1,6 @@
 # Challenge Snake.apk — Writeup Reverse Engineering & Exploitation SnakeYAML
 
-## 🎯 Objectif
+## Objectif
 
 L'application Android implémente plusieurs mécanismes de protection anti-reverse 
 (détection de root, détection d'émulateur et détection de Frida via la librairie native). 
@@ -54,7 +54,7 @@ Avant de commencer, on vérifie que tous les outils sont bien installés.
 
 <img width="706" height="110" alt="image" src="https://github.com/user-attachments/assets/70c72b87-fb69-4bce-acb7-a256e3481bb7" />
 
-> ✅ Tous les outils sont vérifiés et l'environnement est prêt. L'APK est installé sur 
+> Tous les outils sont vérifiés et l'environnement est prêt. L'APK est installé sur 
 > l'émulateur **Pixel 6 API 37** — l'application se lance et affiche l'écran Snake 
 > sans déclencher les protections anti-émulateur sur cette version d'Android.
 
@@ -86,29 +86,15 @@ C'est la cible de notre exploitation :
 - La fonction JNI génère le flag en hexadécimal, le convertit en ASCII et l'affiche 
   via `Log.d("BigBoss: ", flag)` dans logcat
 
-### Protections détectées
-
-| Protection | Mécanisme |
-|---|---|
-| **Root** | Vérification `Build.TAGS`, `/system/app/Superuser.apk`, commande `su` |
-| **Émulateur** | Propriétés `ro.hardware`, `ro.product.model` |
-| **Frida** | Scan de processus et ports dans `libsnake.so` |
-| **Anti-debug** | Appel `ptrace` dans la librairie native |
-
-> 💡 Le développeur a caché la logique du flag dans `BigBoss`, une classe jamais 
-> appelée normalement. La vulnérabilité **SnakeYAML (CVE-2022-1471)** permet de 
-> forcer son instanciation avec le bon paramètre via un fichier YAML malveillant.
-
----
 
 ## Étape 3 : Patch Smali (non nécessaire dans notre cas)
 
-> ℹ️ Cette étape de patching Smali **n'est pas nécessaire** sur **Pixel 6 API 37** —
+> Cette étape de patching Smali **n'est pas nécessaire** sur **Pixel 6 API 37** —
 > l'émulateur n'est pas rooté et l'application se lance normalement sans déclencher 
 > les protections anti-root/émulateur. SELinux fonctionne en mode permissif pour ptrace,
 > ce qui permet à la librairie native de s'exécuter sans crasher.
 
-Si tu utilises un émulateur rooté ou une version Android plus ancienne, il faudrait :
+Si on utilises un émulateur rooté ou une version Android plus ancienne, il faudrait :
 1. Décompiler avec `apktool d snake.apk -o snake_smali`
 2. Patcher `MainActivity.smali` et `BigBoss.smali` pour neutraliser le `loadLibrary`
 3. Recompiler avec `apktool b snake_smali -o snake_patched.apk`
@@ -189,7 +175,6 @@ adb logcat | Select-String -Pattern "BigBoss|PWNSEC"
 
 ---
 
-## 🏁 Flag
 
  
 
