@@ -1,7 +1,7 @@
 # Challenge Snake.apk — Guide de Reverse Engineering & Patching
 
 Récupérer l'APK
-<img width="473" height="502" alt="image" src="https://github.com/user-attachments/assets/bd7e984c-cd4a-45ff-9a0f-bd02078ec815" />
+<img width="367" height="386" alt="image" src="https://github.com/user-attachments/assets/7a9c7161-55f2-4ebf-8375-c7a452567aaa" />
 
 Vérification de l'environnement 
 
