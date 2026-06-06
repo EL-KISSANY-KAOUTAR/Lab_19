@@ -55,7 +55,11 @@ crée et transfère le fichier YAML :
 
 Lancement avec l'Intent
 
+<img width="887" height="59" alt="image" src="https://github.com/user-attachments/assets/fc9ac089-f184-4e47-9978-472d61e8060d" />
 
+Récupération du flag via logcat
+
+<img width="872" height="361" alt="image" src="https://github.com/user-attachments/assets/e960e124-85d0-4956-aa1b-7dd21c3178a4" />
 
 
 
