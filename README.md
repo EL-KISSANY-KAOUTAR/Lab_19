@@ -59,18 +59,20 @@ On ouvre `snake.apk` dans JADX-GUI et on explore le code source décompilé.
 - La fonction JNI génère le flag et l'affiche via `Log.d("BigBoss: ", flag)`
 
 
-Note : Cette étape de patching Smali n'est pas nécessaire dans notre cas, car l'émulateur utilisé (Pixel 6 API 37) n'est pas rooté et l'application se lance normalement sans déclencher les protections anti-root/émulateur.
+## Étape 3 : Création du payload YAML
 
-Étape 4 : Création du payload YAML
-1. Créer le dossier sur l'émulateur
+> Note : Cette étape de patching Smali n'est pas nécessaire dans notre cas, car l'émulateur utilisé n'est pas rooté et l'application se lance normalement sans déclencher les protections anti-root/émulateur.
+
+### 1. Créer le dossier sur l'émulateur
 
 <img width="644" height="35" alt="image" src="https://github.com/user-attachments/assets/e58addf0-7b44-4e96-8650-da9825cea2d9" />
 
-crée et transfère le fichier YAML :
+### 2. Créer et transférer le fichier YAML
 
+# Créer le fichier en local
 <img width="959" height="188" alt="image" src="https://github.com/user-attachments/assets/39e8a5b2-ad7e-4158-802e-196dfe0b4442" />
 
-
+# Transférer sur l'émulateur
 <img width="847" height="211" alt="image" src="https://github.com/user-attachments/assets/19e285e7-e472-42f4-ab23-f81867952095" />
 
 Lancement avec l'Intent
