@@ -175,6 +175,11 @@ adb logcat | Select-String -Pattern "BigBoss|PWNSEC"
 
 ---
 
+## Conclusion
+
+Ce challenge illustre parfaitement comment une vulnérabilité de désérialisation 
+**SnakeYAML (CVE-2022-1471)** peut être exploitée dans une application Android 
+pour contourner toute la logique de protection et déclencher du code caché.
 
  
 
