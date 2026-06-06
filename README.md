@@ -61,7 +61,7 @@ Récupération du flag via logcat
 
 <img width="872" height="361" alt="image" src="https://github.com/user-attachments/assets/e960e124-85d0-4956-aa1b-7dd21c3178a4" />
 
-
+ 
 
 
 
