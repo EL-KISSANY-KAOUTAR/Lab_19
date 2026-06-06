@@ -10,7 +10,7 @@ L'objectif est d'exploiter cette vulnérabilité de désérialisation pour insta
 
 ### Récupérer l'APK et installer sur l'émulateur
 
-<img width="367" height="386" alt="image" src="https://github.com/user-attachments/assets/7a9c7161-55f2-4ebf-8375-c7a452567aaa" />
+<img width="414" height="475" alt="image" src="https://github.com/user-attachments/assets/1a47a40c-b1bb-4712-9c2b-4638929328b4" />
 
 
 ### Vérification de l'environnement
@@ -21,21 +21,21 @@ L'objectif est d'exploiter cette vulnérabilité de désérialisation pour insta
 
 <img width="927" height="515" alt="image" src="https://github.com/user-attachments/assets/a89035e7-fb41-4e74-8e74-21235b1fbd54" />
 
-Java
+#### Java
 
 <img width="599" height="65" alt="image" src="https://github.com/user-attachments/assets/7cb78338-5572-4207-a04a-8e2e859959a8" />
 
-Apktool
+#### Apktool
 
 <img width="623" height="41" alt="image" src="https://github.com/user-attachments/assets/e298eb0f-fc1d-46cc-9b87-0261185ecb56" />
 
-Adb
+#### ADB
 
 <img width="706" height="110" alt="image" src="https://github.com/user-attachments/assets/70c72b87-fb69-4bce-acb7-a256e3481bb7" />
 
-Installe l’APK original pour tester les comportements :
 
-<img width="414" height="475" alt="image" src="https://github.com/user-attachments/assets/1a47a40c-b1bb-4712-9c2b-4638929328b4" />
+
+
 
 <img width="229" height="437" alt="image" src="https://github.com/user-attachments/assets/8c8f444e-3e64-48fe-936c-608c0bb4d82b" />
 
