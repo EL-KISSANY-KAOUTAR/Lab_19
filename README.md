@@ -36,15 +36,28 @@ L'objectif est d'exploiter cette vulnérabilité de désérialisation pour insta
 <img width="706" height="110" alt="image" src="https://github.com/user-attachments/assets/70c72b87-fb69-4bce-acb7-a256e3481bb7" />
 
 
-Analyse statique approfondie avec Jadx
+## Étape 2 : Analyse statique approfondie avec JADX-GUI
 
-Classe d’entrée : MainActivity
+On ouvre `snake.apk` dans JADX-GUI et on explore le code source décompilé.
+
+### Classe d'entrée : MainActivity
 
 <img width="959" height="485" alt="image" src="https://github.com/user-attachments/assets/bc90175a-f9bb-4ae2-a3ec-abef3839551e" />
 
-Classe importante : BigBoss (dans com.pwnsec.snake.BigBoss)
+- L'application vérifie un **Intent extra** nommé `SNAKE` avec la valeur exacte `BigBoss`
+- Si la condition est remplie, elle lit le fichier `/sdcard/Snake/Skull_Face.yml`
+- Le contenu est parsé avec **SnakeYAML**
+- On observe plusieurs méthodes de détection : `checkForDangerousBinaries()`, 
+  `checkForRootManagementApps()`, `checkForRootShell()`, `isDeviceRooted()`
+
+### Classe importante : BigBoss
 
 <img width="959" height="481" alt="image" src="https://github.com/user-attachments/assets/109850d2-26ac-4dd4-8cfa-2f8d81245a66" />
+
+- Charge la librairie native via `System.loadLibrary("snake")`
+- Si le paramètre reçu est exactement `Snaaaaaaaaaaaaaake`, appelle `stringFromJNI()`
+- La fonction JNI génère le flag et l'affiche via `Log.d("BigBoss: ", flag)`
+
 
 Note : Cette étape de patching Smali n'est pas nécessaire dans notre cas, car l'émulateur utilisé (Pixel 6 API 37) n'est pas rooté et l'application se lance normalement sans déclencher les protections anti-root/émulateur.
 
