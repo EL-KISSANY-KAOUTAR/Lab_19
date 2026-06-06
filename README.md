@@ -1,4 +1,10 @@
-# Challenge Snake.apk — Guide de Reverse Engineering & Patching
+# Challenge Snake.apk — Writeup Reverse Engineering & Exploitation SnakeYAML
+
+## 🎯 Objectif
+
+L'application Android implémente plusieurs mécanismes de protection anti-reverse (détection de root, détection d'émulateur et détection de Frida via la librairie native). Elle lit un fichier YAML depuis le stockage externe et le parse en utilisant une version vulnérable de **SnakeYAML** (CVE-2022-1471).
+
+L'objectif est d'exploiter cette vulnérabilité de désérialisation pour instancier une classe cachée nommée `BigBoss` qui génère et affiche le flag dans logcat.
 
 Récupérer l'APK
 <img width="367" height="386" alt="image" src="https://github.com/user-attachments/assets/7a9c7161-55f2-4ebf-8375-c7a452567aaa" />
