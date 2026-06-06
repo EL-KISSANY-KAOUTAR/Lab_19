@@ -12,6 +12,8 @@ L'objectif est d'exploiter cette vulnérabilité de désérialisation pour insta
 
 <img width="414" height="475" alt="image" src="https://github.com/user-attachments/assets/1a47a40c-b1bb-4712-9c2b-4638929328b4" />
 
+<img width="229" height="437" alt="image" src="https://github.com/user-attachments/assets/8c8f444e-3e64-48fe-936c-608c0bb4d82b" />
+
 
 ### Vérification de l'environnement
 
@@ -33,11 +35,6 @@ L'objectif est d'exploiter cette vulnérabilité de désérialisation pour insta
 
 <img width="706" height="110" alt="image" src="https://github.com/user-attachments/assets/70c72b87-fb69-4bce-acb7-a256e3481bb7" />
 
-
-
-
-
-<img width="229" height="437" alt="image" src="https://github.com/user-attachments/assets/8c8f444e-3e64-48fe-936c-608c0bb4d82b" />
 
 Analyse statique approfondie avec Jadx
 
