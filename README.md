@@ -17,11 +17,6 @@ classe cachée nommée `BigBoss` qui génère et affiche le flag dans logcat.
 
 ## Étape 1 : Préparation de l'environnement
 
-On commence par installer tous les outils nécessaires et préparer l'émulateur Android.
-On utilise un émulateur **Pixel 6 API 37** (Google Play Store) — sur cette version,
-SELinux fonctionne en mode permissif ce qui permet à l'app de se lancer sans déclencher 
-les protections anti-émulateur.
-
 ### Récupérer l'APK et installer sur l'émulateur
 
 ```powershell
@@ -89,7 +84,7 @@ C'est la cible de notre exploitation :
 
 ## Étape 3 : Patch Smali (non nécessaire dans notre cas)
 
-> Cette étape de patching Smali **n'est pas nécessaire** sur **Pixel 6 API 37** —
+> Cette étape de patching Smali **n'est pas nécessaire** 
 > l'émulateur n'est pas rooté et l'application se lance normalement sans déclencher 
 > les protections anti-root/émulateur. SELinux fonctionne en mode permissif pour ptrace,
 > ce qui permet à la librairie native de s'exécuter sans crasher.
