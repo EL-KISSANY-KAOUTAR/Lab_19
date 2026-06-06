@@ -6,12 +6,16 @@ L'application Android implémente plusieurs mécanismes de protection anti-rever
 
 L'objectif est d'exploiter cette vulnérabilité de désérialisation pour instancier une classe cachée nommée `BigBoss` qui génère et affiche le flag dans logcat.
 
-Récupérer l'APK
+## Étape 1 : Préparation de l'environnement
+
+### Récupérer l'APK et installer sur l'émulateur
+
 <img width="367" height="386" alt="image" src="https://github.com/user-attachments/assets/7a9c7161-55f2-4ebf-8375-c7a452567aaa" />
 
-Vérification de l'environnement 
 
-JADX-GUI 
+### Vérification de l'environnement
+
+#### JADX-GUI
 
 <img width="628" height="65" alt="image" src="https://github.com/user-attachments/assets/44f524f0-d1ec-49a6-845f-5d174ec31c70" />
 
